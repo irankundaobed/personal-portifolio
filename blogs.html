@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <title>blogs</title>
+</head>
+<body>
+   <header>
+      <a href="home.html" class="logo"><i>trench</i> <span><i>kid</i></span></a>
+
+   </header>
+   
+    <p class="port">my portfolio</p>
+
+    <div class="zz">
+    <style>
+        body { font-family: sans-serif; padding: 20px;  }
+        textarea, input {
+    width: 100%;
+    height: 50%;
+    padding: 20px 20px;
+    margin: 20px 0;
+    color: #fff;
+    border: none;
+    outline: none;
+    border: 2px solid green;
+    background: transparent;
+    border-radius: 3px;
+    font-family: monospace;
+        }
+        .btn{
+         color: green;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    width: 35%;
+    height: 50px;
+    border: 2px solid green;
+    background-image: linear-gradient(to bottom, #000,#333);
+    font-family: monospace;
+    font-size: 2rem;
+        }
+        .newone{
+    margin-top: 4%;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+   }
+   .lo{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      }
+        .lo .img img{
+         width: 32vh;
+         margin-left: 20%;
+         margin-top: 0%;
+         border-radius: 0%;
+         border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+        }
+        .post { border: 3px solid #333; padding: 20px; margin: 20px; border-radius: 8px; font-size: 2rem; width: 80%;}
+        .post button{
+         color: green;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    width: 10%;
+    height: 40px;
+    border: 2px solid green;
+    background-image: linear-gradient(to bottom, #000,#333);
+    font-family: monospace;
+    font-size: 2rem;
+        }
+      </style>
+    </head>
+    <body>
+       <div class="lo">
+      <form class="newone">
+         <div class="pore">
+      <h1 style="color: #333; font-size: 3.5rem; font-weight: 800;"><i> post your blog here</i></h1>
+      <input type="text" id="title" placeholder="Post Title" />
+      <textarea id="content" placeholder="Write your post here..."></textarea>
+      <button class="btn" onclick="savePost()">Publish</button>
+      </form>
+      </div>
+      <div class="img">
+         <img src="8.jpg" alt="">
+      </div>
+      </div>
+      <h2 style="color: green; margin: 20px; font-size: 2.5rem; font-weight: 800;">Posts are here</h2>
+      <div id="posts"></div>
+    
+      <script src="app.js"></script>
+    </div>
+    <script>
+        
+    </script>
+    <footer>
+       
+       <div class="icons">
+          <label for="">follow us</label>
+          <a href="https://github.com/dashboard">
+             <li class="bx bxl-github"></li>
+            </a>
+            <a href="https://www.facebook.com/">
+               <li class="bx bxl-facebook"></li>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en">
+               <li class="bx bxl-instagram-alt"></li>
+            </a>
+            <a href="https://x.com/home">
+               <li class="bx bxl-twitter"></li>
+            </a>
+            <a href="https://www.youtube.com/watch?v=dlsjiphBris&ab_channel=TarunCode-WebDesigner">
+               <li class="bx bxl-youtube"></li>
+            </a>
+            <p>&copy; 2025 developed by <label for="">trench kid</label></p>
+         </div>
+      </footer>
+   </section>
+  
+    </body>
+    </html>
