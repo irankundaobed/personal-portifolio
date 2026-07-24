@@ -1,88 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Projects.css';
+import { initialProjects } from '../data/initialData';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [filter, setFilter] = useState('all');
 
   useEffect(() => {
-    const savedProjects = localStorage.getItem('portfolio-projects');
-    if (savedProjects) {
-      setProjects(JSON.parse(savedProjects));
-    } else {
-      const defaultProjects = [
-        {
-          id: 1,
-          title: 'E-Commerce Platform',
-          description: 'Full-stack e-commerce solution with React, Node.js, and SQL database.',
-          category: 'fullstack',
-          technologies: ['React', 'Node.js', 'Express', 'SQL'],
-          image: '🛒',
-          github: 'https://github.com',
-          live: 'https://example.com'
-        },
-        {
-          id: 2,
-          title: 'Task Management App',
-          description: 'Collaborative task management tool with real-time updates.',
-          category: 'frontend',
-          technologies: ['React', 'TailwindCSS', 'JavaScript'],
-          image: '✅',
-          github: 'https://github.com',
-          live: 'https://example.com'
-        },
-        {
-          id: 3,
-          title: 'API Service',
-          description: 'RESTful API service for content management.',
-          category: 'backend',
-          technologies: ['Node.js', 'Express', 'PHP', 'SQL'],
-          image: '🔌',
-          github: 'https://github.com',
-          live: ''
-        },
-        {
-          id: 4,
-          title: 'Portfolio Template',
-          description: 'Responsive portfolio template with modern design.',
-          category: 'frontend',
-          technologies: ['React', 'CSS', 'JavaScript'],
-          image: '💼',
-          github: 'https://github.com',
-          live: 'https://example.com'
-        },
-        {
-          id: 5,
-          title: 'Blog CMS',
-          description: 'Content management system for blogging with admin panel.',
-          category: 'fullstack',
-          technologies: ['React', 'Node.js', 'SQL'],
-          image: '📝',
-          github: 'https://github.com',
-          live: 'https://example.com'
-        },
-        {
-          id: 6,
-          title: 'Weather App',
-          description: 'Real-time weather application with location search.',
-          category: 'frontend',
-          technologies: ['React', 'JavaScript', 'API Integration'],
-          image: '🌤️',
-          github: 'https://github.com',
-          live: 'https://example.com'
-        }
-      ];
-      localStorage.setItem('portfolio-projects', JSON.stringify(defaultProjects));
-      setProjects(defaultProjects);
-    }
+    // Always load fresh data from initialData.js
+    console.log('Loading projects:', initialProjects);
+    localStorage.setItem('portfolio-projects', JSON.stringify(initialProjects));
+    setProjects(initialProjects);
   }, []);
 
-  const categories = ['all', 'fullstack', 'frontend', 'backend'];
+  const categories = ['all', 'live', 'upcoming'];
 
   const filteredProjects = filter === 'all' 
     ? projects 
-    : projects.filter(project => project.category === filter);
+    : projects.filter(project => project.status === filter);
 
   return (
     <div className="projects">
@@ -108,10 +44,18 @@ const Projects = () => {
               <div key={project.id} className="project-card card fade-in">
                 <div className="project-image">
                   <span className="project-emoji">{project.image}</span>
+                  <span className={`project-status ${project.status}`}>
+                    {project.status === 'live' ? '🟢 Live' : '🚧 Upcoming'}
+                  </span>
                 </div>
                 <div className="project-content">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
+                  {project.expectedLaunch && (
+                    <p className="expected-launch">
+                      <strong>Expected Launch:</strong> {project.expectedLaunch}
+                    </p>
+                  )}
                   <div className="project-tags">
                     {project.technologies.map((tech, i) => (
                       <span key={i} className="tag">{tech}</span>
@@ -123,10 +67,12 @@ const Projects = () => {
                         GitHub
                       </a>
                     )}
-                    {project.live && (
+                    {project.live ? (
                       <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                         Live Demo
                       </a>
+                    ) : (
+                      <span className="coming-soon-badge">Coming Soon</span>
                     )}
                     <Link to={`/projects/${project.id}`} className="btn btn-secondary">
                       Details

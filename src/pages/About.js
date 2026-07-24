@@ -4,7 +4,7 @@ import './About.css';
 const About = () => {
   const experiences = [
     {
-      year: '2023 - Present',
+      year: '2025 - Present',
       title: 'Full Stack Developer',
       company: 'Freelance',
       description: 'Building modern web applications with React, Node.js, and various technologies.'
@@ -19,10 +19,10 @@ const About = () => {
 
   const education = [
     {
-      year: '2020 - 2024',
-      degree: 'Bachelor in Computer Science',
-      institution: 'University',
-      description: 'Focused on software development, algorithms, and web technologies.'
+      year: '2023 - 2025',
+      degree: 'Secondary in Software Development',
+      institution: 'Secondary',
+      description: 'Focused on software development, automation, and web technologies.'
     }
   ];
 
@@ -37,13 +37,30 @@ const About = () => {
             <div className="about-text slide-in-left">
               <h2>Hello! I'm IRANKUNDA Obed</h2>
               <p>
-                I'm a passionate Full Stack Developer with expertise in building modern web applications.
-                I love turning complex problems into simple, beautiful, and intuitive solutions.
+                I'm a Full-Stack Developer who enjoys building scalable, user-focused web applications from concept to deployment. 
+                I work across both frontend and backend development using modern technologies, and I adapt quickly to new frameworks, 
+                languages, and tools whenever a project demands them.
               </p>
               <p>
-                My journey in web development started with a curiosity about how websites work,
-                and it has evolved into a full-fledged passion for creating seamless digital experiences.
-                I specialize in JavaScript technologies, particularly React for frontend and Node.js for backend.
+                I believe great software is more than just writing code. 
+                I help transform ideas into practical solutions by advising on project architecture, 
+                identifying the right technologies, improving user experience, and delivering clean, 
+                maintainable, and reliable applications.
+              </p>
+              <p>
+                My strengths include:
+
+                <ul>
+                  <li>Learning new technologies quickly and applying them effectively.</li>
+                  <li>Building high-quality, responsive, and scalable web applications.</li>
+                  <li>Advising businesses and teams on the best technical approach for their projects.</li>
+                  <li>Testing software to identify bugs, improve performance, and ensure a smooth user experience.</li>
+                  <li>Writing clean, maintainable, and efficient code that is built for long-term growth.</li>
+                </ul>
+
+                Whether it's creating a new product, improving an existing system, 
+                or validating software before release, I focus on delivering solutions that are reliable, 
+                secure, and built to solve real business problems.
               </p>
               <p>
                 When I'm not coding, you'll find me exploring new technologies, contributing to open-source
@@ -52,8 +69,8 @@ const About = () => {
               
               <div className="stats-grid">
                 <div className="stat-card">
-                  <h3>50+</h3>
-                  <p>Projects Completed</p>
+                  <h3>1+</h3>
+                  <p>Live Projects</p>
                 </div>
                 <div className="stat-card">
                   <h3>3+</h3>

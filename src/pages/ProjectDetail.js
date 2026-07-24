@@ -58,8 +58,13 @@ const ProjectDetail = () => {
           <div className="project-content-detail">
             <div className="project-info-grid">
               <div className="info-card card">
-                <h3>Category</h3>
-                <p>{project.category}</p>
+                <h3>Status</h3>
+                <p className={`project-status-detail ${project.status}`}>
+                  {project.status === 'live' ? '🟢 Live & Active' : '🚧 In Development'}
+                </p>
+                {project.expectedLaunch && (
+                  <p className="launch-date">Expected: {project.expectedLaunch}</p>
+                )}
               </div>
               <div className="info-card card">
                 <h3>Technologies</h3>
@@ -74,49 +79,83 @@ const ProjectDetail = () => {
             <div className="project-details-text">
               <h2>Project Overview</h2>
               <p>
-                {project.title} is a comprehensive solution built using modern web technologies.
-                This project showcases best practices in {project.category} development and
-                demonstrates proficiency in {project.technologies.join(', ')}.
+                {project.overview || `${project.title} is a comprehensive solution built using modern web technologies. This project ${project.status === 'live' ? 'is currently live and being used by users' : 'is currently in active development'}, demonstrating proficiency in ${project.technologies.join(', ')}.`}
               </p>
 
               <h2>Key Features</h2>
-              <ul>
-                <li>Responsive and mobile-friendly design</li>
-                <li>Clean and maintainable code structure</li>
-                <li>Optimized performance and fast load times</li>
-                <li>User-friendly interface with intuitive navigation</li>
-                <li>Secure and scalable architecture</li>
-              </ul>
+              {project.keyFeatures ? (
+                <ul>
+                  {project.keyFeatures.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              ) : (
+                <ul>
+                  <li>Responsive and mobile-friendly design</li>
+                  <li>Clean and maintainable code structure</li>
+                  <li>Optimized performance and fast load times</li>
+                  <li>User-friendly interface with intuitive navigation</li>
+                  <li>Secure and scalable architecture</li>
+                </ul>
+              )}
 
               <h2>Technologies Used</h2>
               <p>
                 This project leverages the following technologies and tools:
               </p>
               <div className="tech-details">
-                {project.technologies.map((tech, index) => (
-                  <div key={index} className="tech-item card">
-                    <h4>{tech}</h4>
-                    <p>Used for building robust and scalable solutions.</p>
-                  </div>
-                ))}
+                {project.techDetails ? (
+                  project.techDetails.map((tech, index) => (
+                    <div key={index} className="tech-item card">
+                      <h4>{tech.name}</h4>
+                      <p>{tech.purpose}</p>
+                    </div>
+                  ))
+                ) : (
+                  project.technologies.map((tech, index) => (
+                    <div key={index} className="tech-item card">
+                      <h4>{tech}</h4>
+                      <p>Used for building robust and scalable solutions.</p>
+                    </div>
+                  ))
+                )}
               </div>
 
               <h2>Challenges & Solutions</h2>
-              <p>
-                During development, several challenges were encountered and successfully resolved:
-              </p>
-              <ul>
-                <li>Implementing responsive design across all devices</li>
-                <li>Optimizing database queries for better performance</li>
-                <li>Ensuring cross-browser compatibility</li>
-                <li>Managing state efficiently in the application</li>
-              </ul>
+              {project.challenges ? (
+                project.challenges.map((challenge, index) => (
+                  <div key={index} className="challenge-section">
+                    <h3>Challenge: {challenge.title}</h3>
+                    <p><strong>Problem:</strong> {challenge.description}</p>
+                    <p><strong>Solution:</strong> {challenge.solution}</p>
+                  </div>
+                ))
+              ) : (
+                <>
+                  <p>
+                    During development, several challenges were encountered and successfully resolved:
+                  </p>
+                  <ul>
+                    <li>Implementing responsive design across all devices</li>
+                    <li>Optimizing database queries for better performance</li>
+                    <li>Ensuring cross-browser compatibility</li>
+                    <li>Managing state efficiently in the application</li>
+                  </ul>
+                </>
+              )}
+
+              {project.impact && (
+                <>
+                  <h2>Impact & Results</h2>
+                  <p className="impact-text">{project.impact}</p>
+                </>
+              )}
 
               <h2>Conclusion</h2>
               <p>
-                This project demonstrates the ability to build modern, scalable web applications
+                This project demonstrates {project.status === 'live' ? 'proven ability' : 'the ability'} to build modern, scalable web applications
                 using industry-standard tools and best practices. It serves as an excellent
-                example of full-stack development capabilities.
+                example of {project.technologies.slice(0, 2).join(' and ')} development capabilities.
               </p>
             </div>
           </div>

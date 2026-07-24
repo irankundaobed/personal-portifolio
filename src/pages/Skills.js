@@ -7,11 +7,11 @@ const Skills = () => {
       category: 'Frontend Development',
       icon: '🎨',
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'JavaScript', level: 95 },
-        { name: 'HTML', level: 98 },
+        { name: 'React', level: 80 },
+        { name: 'JavaScript', level: 85 },
+        { name: 'HTML', level: 90 },
         { name: 'CSS', level: 95 },
-        { name: 'TailwindCSS', level: 90 }
+        { name: 'TailwindCSS', level: 85 }
       ]
     },
     {
@@ -20,7 +20,7 @@ const Skills = () => {
       skills: [
         { name: 'Node.js', level: 88 },
         { name: 'Express', level: 85 },
-        { name: 'PHP', level: 80 },
+        { name: 'PHP', level: 70 },
         { name: 'SQL', level: 85 }
       ]
     },
@@ -29,8 +29,8 @@ const Skills = () => {
       icon: '🛠️',
       skills: [
         { name: 'Figma', level: 85 },
-        { name: 'Git', level: 92 },
-        { name: 'Responsive Design', level: 95 },
+        { name: 'Git', level: 90 },
+        { name: 'Responsive Design', level: 85 },
         { name: 'UI/UX', level: 80 }
       ]
     }
@@ -80,7 +80,7 @@ const Skills = () => {
               <span className="skill-tag">Problem Solving</span>
               <span className="skill-tag">Team Collaboration</span>
               <span className="skill-tag">Web Performance</span>
-              <span className="skill-tag">SEO Optimization</span>
+              <span className="skill-tag">Projects Analysis</span>
               <span className="skill-tag">Testing & Debugging</span>
               <span className="skill-tag">Code Review</span>
             </div>

@@ -65,14 +65,14 @@ const Contact = () => {
                 <span className="info-icon">📧</span>
                 <div>
                   <h3>Email</h3>
-                  <a href="mailto:irankunda.obed@example.com">irankunda.obed@example.com</a>
+                  <a href="mailto:iobed157@gmail.com">iobed157@gmail.com</a>
                 </div>
               </div>
               <div className="info-item">
                 <span className="info-icon">📱</span>
                 <div>
                   <h3>Phone</h3>
-                  <a href="tel:+250123456789">+250 123 456 789</a>
+                  <a href="tel:+250783724951">+250 783 724 951</a>
                 </div>
               </div>
               <div className="info-item">
@@ -86,13 +86,16 @@ const Contact = () => {
               <div className="social-links">
                 <h3>Follow Me</h3>
                 <div className="social-icons">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <a href="https://github.com/irankundaobed" target="_blank" rel="noopener noreferrer" className="social-link">
                     GitHub
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <a href="https://www.instagram.com/heis_kid_/" target="_blank" rel="noopener noreferrer" className="social-link">
+                    Instagram
+                  </a>
+                  <a href="https://www.linkedin.com/in/irankunda-obed-a7520a402/" target="_blank" rel="noopener noreferrer" className="social-link">
                     LinkedIn
                   </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <a href="https://x.com/ObedIranku34744" target="_blank" rel="noopener noreferrer" className="social-link">
                     Twitter
                   </a>
                 </div>
