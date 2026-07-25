@@ -5,6 +5,13 @@
   align-items: center;
   margin-top: 3rem;
 }
+.about-content ul{
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+}
+.about-content li{
+  padding-left: 0.3rem;
+}
 
 .about-text h2 {
   font-size: 2rem;

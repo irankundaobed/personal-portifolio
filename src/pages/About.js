@@ -4,7 +4,7 @@ import './About.css';
 const About = () => {
   const experiences = [
     {
-      year: '2025 - Present',
+      year: '2023 - Present',
       title: 'Full Stack Developer',
       company: 'Freelance',
       description: 'Building modern web applications with React, Node.js, and various technologies.'
@@ -48,8 +48,8 @@ const About = () => {
                 maintainable, and reliable applications.
               </p>
               <p>
-                My strengths include:
-
+                My strengths include :
+              </p>
                 <ul>
                   <li>Learning new technologies quickly and applying them effectively.</li>
                   <li>Building high-quality, responsive, and scalable web applications.</li>
@@ -57,7 +57,7 @@ const About = () => {
                   <li>Testing software to identify bugs, improve performance, and ensure a smooth user experience.</li>
                   <li>Writing clean, maintainable, and efficient code that is built for long-term growth.</li>
                 </ul>
-
+                <p>
                 Whether it's creating a new product, improving an existing system, 
                 or validating software before release, I focus on delivering solutions that are reliable, 
                 secure, and built to solve real business problems.

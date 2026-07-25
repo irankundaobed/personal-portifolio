@@ -12,8 +12,9 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
-          <span className="logo-text">IRANKUNDA</span>
+          <span className="logo-text">i</span>
           <span className="logo-dot">.</span>
+          <span className="logo-text">OBED</span>
         </Link>
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
