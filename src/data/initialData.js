@@ -7,7 +7,7 @@ export const initialProjects = [
     title: 'Church Attendance System',
     description: 'Full-stack Samuduha SDA chucrh , attendance system that record the availability of worshipers . currently still updating some features',
     status: 'live',
-    technologies: ['React', 'Node.js', 'Express', 'SQL', 'TailwindCSS'],
+    technologies: ['javascript', 'css', 'html', 'SQL'],
     image: '📖',
     github: 'https://github.com/irankundaobed',
     live: 'https://samuduha-sda-attendance.vercel.app',
@@ -121,84 +121,20 @@ export const initialProjects = [
   },
   {
     id: 3,
-    title: 'Task Management App',
-    description: 'Collaborative task management tool with real-time updates. Users can create, assign, and track tasks with team members. Building advanced collaboration features.',
+    title: 'Magic Paper Illusion',
+    description: 'simple javascript crazy paper game that help to relax .',
     status: 'upcoming',
-    technologies: ['React', 'TailwindCSS', 'JavaScript', 'WebSocket'],
-    image: '✅',
-    github: 'https://github.com/yourusername/task-manager',
-    live: '',
-    expectedLaunch: 'Q4 2026',
-    // Detailed information
-    overview: 'A modern task management application designed for teams to collaborate effectively. The platform offers real-time synchronization, intuitive task organization, and powerful collaboration features to boost team productivity.',
-    keyFeatures: [
-      'Real-time task updates using WebSocket technology',
-      'Kanban board with drag-and-drop functionality',
-      'Task assignment and delegation',
-      'Priority levels and due date management',
-      'Team collaboration with comments and mentions',
-      'File attachments for tasks',
-      'Activity timeline and audit logs',
-      'Custom labels and categories',
-      'Progress tracking and reporting',
-      'Email and in-app notifications'
-    ],
-    challenges: [
-      {
-        title: 'Real-time Synchronization',
-        description: 'Ensuring all team members see updates instantly without conflicts or data loss.',
-        solution: 'Implementing WebSocket connections with optimistic UI updates and conflict resolution algorithms to handle simultaneous edits.'
-      },
-      {
-        title: 'Drag-and-Drop Performance',
-        description: 'Maintaining smooth drag-and-drop interactions even with hundreds of tasks on the board.',
-        solution: 'Using React Beautiful DnD library with virtualization for large lists and implementing efficient re-rendering strategies.'
-      },
-      {
-        title: 'Offline Support',
-        description: 'Allowing users to work offline and sync changes when connection is restored.',
-        solution: 'Implementing service workers and IndexedDB for local storage with automatic sync queue when online.'
-      }
-    ],
-    techDetails: [
-      {
-        name: 'React',
-        purpose: 'Building interactive UI components with hooks for state management and React Beautiful DnD for drag-and-drop functionality.'
-      },
-      {
-        name: 'TailwindCSS',
-        purpose: 'Creating responsive and modern design with utility classes, ensuring consistent styling and fast development.'
-      },
-      {
-        name: 'WebSocket',
-        purpose: 'Enabling real-time bidirectional communication between clients and server for instant task updates across all users.'
-      }
-    ],
-    impact: 'Expected to improve team productivity by 35% with streamlined task management and enhanced collaboration features.'
-  },
-  {
-    id: 4,
-    title: 'RESTful API Service',
-    description: 'Robust RESTful API service for content management with authentication, authorization, and CRUD operations. Designing scalable microservices architecture.',
-    status: 'upcoming',
-    technologies: ['Node.js', 'Express', 'PHP', 'SQL', 'Redis'],
+    technologies: ['javascript', 'React', 'tailwind css', 'vite'],
     image: '🔌',
     github: 'https://github.com/yourusername/api-service',
     live: '',
-    expectedLaunch: 'Q1 2027',
+    expectedLaunch: 'Early 2027',
     // Detailed information
-    overview: 'A comprehensive RESTful API service built with scalability and security in mind. The API provides a robust backend infrastructure for content management applications with advanced features like caching, rate limiting, and comprehensive documentation.',
+    overview: 'this game is built using javascript and react to creaete a simmple moving paper project, to help people to relax.',
     keyFeatures: [
-      'RESTful endpoints following industry best practices',
-      'JWT-based authentication and authorization',
-      'Role-based access control (RBAC)',
-      'API rate limiting and throttling',
-      'Redis caching for improved performance',
-      'Comprehensive API documentation with Swagger',
-      'Request validation and sanitization',
-      'Error handling and logging system',
-      'API versioning for backward compatibility',
-      'Database query optimization and indexing'
+      'endless moving paper',
+      'flowing water',
+      'wild ecosystem'
     ],
     challenges: [
       {

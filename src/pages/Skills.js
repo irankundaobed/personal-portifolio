@@ -8,20 +8,21 @@ const Skills = () => {
       icon: '🎨',
       skills: [
         { name: 'React', level: 80 },
-        { name: 'JavaScript', level: 85 },
+        { name: 'JavaScript', level: 75 },
         { name: 'HTML', level: 90 },
         { name: 'CSS', level: 95 },
-        { name: 'TailwindCSS', level: 85 }
+        { name: 'TailwindCSS', level: 75 }
       ]
     },
     {
       category: 'Backend Development',
       icon: '⚙️',
       skills: [
-        { name: 'Node.js', level: 88 },
-        { name: 'Express', level: 85 },
-        { name: 'PHP', level: 70 },
-        { name: 'SQL', level: 85 }
+        { name: 'Node.js', level: 78 },
+        { name: 'python', level: 78 },
+        { name: 'Express', level: 75 },
+        { name: 'PHP', level: 60 },
+        { name: 'SQL', level: 75 }
       ]
     },
     {
