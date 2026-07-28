@@ -126,7 +126,7 @@ export const initialProjects = [
     status: 'upcoming',
     technologies: ['javascript', 'React', 'tailwind css', 'vite'],
     image: '🔌',
-    github: 'https://github.com/yourusername/api-service',
+    github: 'https://github.com/irankundaobed/crazy-paper',
     live: '',
     expectedLaunch: 'Early 2027',
     // Detailed information
